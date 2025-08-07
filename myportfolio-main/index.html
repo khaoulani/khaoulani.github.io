@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de KHAOULANI Hamza - Alternance chez GE Power Conversion</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("AaVqb3IhL64FDK4Di");
+        })();
+    </script>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00A78E', /* Vert GE Vernova */
+                        secondary: '#FFFFFF', /* Blanc */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Roboto', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .text-primary {
+            color: #00A78E;
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fadeInLeft {
+            animation: fadeInLeft 1s ease forwards;
+        }
+
+        .animate-fadeInRight {
+            animation: fadeInRight 1s ease forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-['Pacifico'] text-primary">KHAOULANI Hamza</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#accueil" class="text-gray-600 hover:text-primary transition-colors">Accueil</a>
+                <a href="#projets" class="text-gray-600 hover:text-primary transition-colors">Projets</a>
+                <a href="#competences" class="text-gray-600 hover:text-primary transition-colors">Compétences</a>
+                <a href="#contact" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle"
+                    class="w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition-colors">
+                    <i class="ri-sun-line ri-lg"></i>
+                </button>
+                <button id="mobile-menu-button"
+                    class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition-colors">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-4 py-2">
+            <div class="flex flex-col space-y-3 py-2">
+                <a href="#accueil" class="text-gray-700 hover:text-primary transition-colors py-2">Accueil</a>
+                <a href="#projets" class="text-gray-700 hover:text-primary transition-colors py-2">Projets</a>
+                <a href="#competences" class="text-gray-700 hover:text-primary transition-colors py-2">Compétences</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition-colors py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="accueil" class="min-h-screen flex items-center justify-center pt-20 pb-16 relative bg-gradient-to-br from-[#E0F7FA] via-[#FFFFFF] to-[#E0F7FA] overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center relative max-w-screen-2xl">
+            <!-- Texte principal -->
+            <div class="w-full lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 section-fade animate-fadeInLeft">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight">
+                    <span class="text-secondary">KHAOULANI Hamza</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-gray-700 mb-6 font-semibold">
+                    Alternant chez GE Vernova<br>Développement d’outils métiers & automatisation
+                </h2>
+                <p class="text-lg text-gray-700 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Durant mon alternance chez GE Vernova, j’ai mené plus de 3 projets d’automatisation et d’analyse de données pour l’industrie navale et l’optimisation des process. Découvrez mes réalisations professionnelles.
+                </p>
+                <a href="#projets" class="inline-block bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-secondary transition-colors shadow-md">
+                    Voir mes projets
+                </a>
+            </div>
+            <!-- Logo GE -->
+            <img src="Image/GE.png" alt="Logo GE Vernova" class="w-full lg:w-1/2 mt-0 animate-fadeInRight max-w-lg lg:max-w-2xl xl:max-w-3xl h-auto mx-auto lg:block lg:ml-auto lg:mr-0">
+        </div>
+    </section>
+    <section id="projets" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 section-fade">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Mes Projets chez GE Power Conversion</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Voici une sélection de projets réalisés durant mon alternance, axés sur l’automatisation, la gestion de données et l’optimisation industrielle.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Projet 1 : Scope de maintenance -->
+                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl section-fade"
+                    data-project="1">
+                    <div class="relative overflow-hidden h-64">
+                        <a href="Scope.html">
+                            <img src="Image/ScopeDeMaintenance.png"
+                                alt="Scope de maintenance"
+                                class="project-image w-full h-full object-cover object-center transition-transform duration-300">
+                            <span class="absolute inset-0 flex items-center justify-center bg-primary bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-medium !rounded-button">
+                                Voir détails
+                            </span>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Scope de maintenance</h3>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="text-xs bg-primary text-white px-2 py-1 rounded">VBA</span>
+                            <span class="text-xs bg-primary text-white px-2 py-1 rounded">Excel</span>
+                            <span class="text-xs bg-primary text-white px-2 py-1 rounded">Automatisation</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Outil Excel/VBA pour générer et gérer automatiquement le scope de maintenance des navires : détection de fichiers, sélection d’équipements, génération des tâches, gestion multilingue, consolidation des pièces et outils, export intelligent.
+                        </p>
+                    </div>
+                </div>
+                <!-- Projet 2 : SmartSheet Drydock Overview -->
+                <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl section-fade"
+                    data-project="2">
+                    <div class="relative overflow-hidden h-64">
+                        <a href="SmartSheet.html">
+                            <img src="Image/smartsheet_dashboard.jpg"
+                                alt="SmartSheet Drydock Overview"
+                                class="project-image w-full h-full object-cover object-center transition-transform duration-300">
+                            <span class="absolute inset-0 flex items-center justify-center bg-primary bg-opacity-80 opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-medium !rounded-button">
+                                Voir détails
+                            </span>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">SmartSheet – Drydock Overview</h3>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="text-xs bg-primary text-white px-2 py-1 rounded">SmartSheet</span>
+                            <span class="text-xs bg-primary text-white px-2 py-1 rounded">Automatisation</span>
+                            <span class="text-xs bg-primary text-white px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-primary text-white px-2 py-1 rounded">Data Shuttle</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Centralisation et automatisation de la gestion des données de maintenance navale via SmartSheet : extraction Service Max, intégration Data Shuttle, dashboards dynamiques par équipe, scripts Python/VBA pour archivage, nettoyage et génération automatique, support et maintenance continue.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modals pour les projets -->
+    <div id="project-modal-1" class="modal fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black bg-opacity-50" id="modal-overlay-1"></div>
+        <div class="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <button
+                class="close-modal absolute top-4 right-4 w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors z-10"
+                data-modal="1">
+                <i class="ri-close-line ri-2x"></i>
+            </button>
+            <div class="p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-4">Scope de maintenance (GE Power Conversion)</h3>
+                <div class="mb-8">
+                    <img src="Image/scope-maintenance.jpg"
+                        alt="Scope de maintenance" class="w-full h-auto rounded-lg">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-flag-line"></i>
+                            </div>
+                            Objectif
+                        </h4>
+                        <p class="text-gray-700">
+                            Automatiser la génération, la gestion et l’export du scope de maintenance pour chaque navire, en intégrant la sélection dynamique des équipements, la gestion multilingue, la consolidation des pièces/outils et l’export sécurisé.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-tools-line"></i>
+                            </div>
+                            Technologies
+                        </h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• VBA (Excel avancé)</li>
+                            <li>• UserForms & Contrôles dynamiques</li>
+                            <li>• Manipulation fichiers & dossiers réseau</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-award-line"></i>
+                            </div>
+                            Compétences mobilisées
+                        </h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li><b>C4 : Gérer des données de l'information</b></li>
+                            <li>• Capturer, stocker et organiser des données complexes (extraction, structuration, export)</li>
+                            <li>• Préparer et extraire des données pour l’exploitation (UserForm, ListBox, ComboBox, parsing fichiers)</li>
+                            <li>• Automatiser l’exploitation et la restitution (export, génération de feuilles dynamiques)</li>
+                            <li class="mt-2"><b>C5 : Conduire un projet</b></li>
+                            <li>• Analyse des besoins, intégration dans le SI, adaptation continue</li>
+                            <li>• Mesure d’impact (gain de temps, fiabilité, sécurité des données)</li>
+                            <li class="mt-2"><b>C6 : Collaborer au sein d'une équipe informatique</b></li>
+                            <li>• Travail en équipe, partage de veille, support utilisateurs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h4 class="font-bold text-lg mb-4">Description détaillée & extraits de code</h4>
+                    <ul class="text-gray-700 space-y-2 mb-4 list-disc pl-5">
+                        <li>
+                            <b>Recherche et gestion intelligente des fichiers :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                ' Vérifie si un fichier existe déjà pour le navire sélectionné<br>
+                                If fso.FolderExists(dossier) Then ... If (InStr(1, fichier.Name, clientName, vbTextCompare) > 0) ...
+                            </span>
+                            Permet d’éviter les doublons et de garantir la traçabilité des interventions.
+                        </li>
+                        <li>
+                            <b>Sélection dynamique des équipements et génération des tâches :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                For rowIndex = 0 To ListBoxResume.ListCount - 1<br>
+                                equipmentType = ExtractEquipmentType(ListBoxResume.List(rowIndex))<br>
+                                ...<br>
+                                taskList = GetTasksForEquipmentType(wsData, equipmentType, selectedYear)
+                            </span>
+                            L’utilisateur choisit les équipements et années, l’outil génère automatiquement les feuilles et tâches associées.
+                        </li>
+                        <li>
+                            <b>Gestion multilingue et consolidation des pièces/outils :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                .Cells(3, 2).Value = "Step 1: Choose Language Display"<br>
+                                ...<br>
+                                .Object.Caption = "Generate Parts and Tools"
+                            </span>
+                            Les feuilles Parts et Tools sont générées et consolidées automatiquement selon la sélection.
+                        </li>
+                        <li>
+                            <b>Export sécurisé et automatisé :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                fileName = "Scope " & coqueNumber & " " & clientName & ...<br>
+                                wbNew.SaveAs fileName:=savePath
+                            </span>
+                            Export du scope dans un nouveau classeur, sans lignes masquées, avec nommage automatique.
+                        </li>
+                    </ul>
+                    <p class="text-gray-700">
+                        <b>Impact :</b>  
+                        Outil déployé sur le réseau GE, utilisé par l’équipe technique et les chefs de projet.  
+                        <br>
+                        <b>Compétences prouvées :</b>  
+                        - <b>C4</b> : Gestion, structuration, extraction et restitution de données complexes (plusieurs feuilles, formats, langues, catalogues).<br>
+                        - <b>C5</b> : Conduite de projet de bout en bout, adaptation continue, documentation et support.<br>
+                        - <b>C6</b> : Travail en équipe, support utilisateurs, partage de bonnes pratiques et veille sur l’automatisation Excel/VBA.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="project-modal-2" class="modal fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black bg-opacity-50" id="modal-overlay-2"></div>
+        <div class="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <button
+                class="close-modal absolute top-4 right-4 w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors z-10"
+                data-modal="2">
+                <i class="ri-close-line ri-2x"></i>
+            </button>
+            <div class="p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-4">SmartSheet – Drydock Overview</h3>
+                <div class="mb-8">
+                    <img src="Image/smartsheet_dashboard.png"
+                        alt="SmartSheet Drydock Overview" class="w-full h-auto rounded-lg">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-flag-line"></i>
+                            </div>
+                            Objectif
+                        </h4>
+                        <p class="text-gray-700">
+                            Centraliser et automatiser la gestion des données de maintenance navale via SmartSheet, en intégrant l’extraction de Service Max, l’archivage, le nettoyage et la génération automatique de données.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-tools-line"></i>
+                            </div>
+                            Technologies
+                        </h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• SmartSheet</li>
+                            <li>• Automatisation</li>
+                            <li>• Python</li>
+                            <li>• Data Shuttle</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-award-line"></i>
+                            </div>
+                            Compétences mobilisées
+                        </h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li><b>C4 : Gérer des données de l'information</b></li>
+                            <li>• Extraction, transformation et chargement de données (ETL)</li>
+                            <li>• Automatisation des flux de données entre applications</li>
+                            <li>• Création de rapports et dashboards dynamiques</li>
+                            <li class="mt-2"><b>C5 : Conduire un projet</b></li>
+                            <li>• Analyse des besoins, conception et déploiement de solutions</li>
+                            <li>• Documentation technique et formation des utilisateurs</li>
+                            <li class="mt-2"><b>C6 : Collaborer au sein d'une équipe informatique</b></li>
+                            <li>• Travail en équipe agile, gestion des versions, intégration continue</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h4 class="font-bold text-lg mb-4">Description détaillée & extraits de code</h4>
+                    <ul class="text-gray-700 space-y-2 mb-4 list-disc pl-5">
+                        <li>
+                            <b>Extraction et intégration des données Service Max :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                ' Connexion à l'API Service Max et extraction des données<br>
+                                Set http = CreateObject("MSXML2.ServerXMLHTTP.6.0")<br>
+                                http.Open "GET", url, False, username, password
+                            </span>
+                            Récupération automatisée des données de maintenance depuis Service Max.
+                        </li>
+                        <li>
+                            <b>Automatisation du nettoyage et de l'archivage :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                For Each fichier In dossier.Files<br>
+                                If fichier.Name Like "*.csv" Then<br>
+                                ' Traitement des fichiers CSV (nettoyage, transformation)<br>
+                                Next fichier
+                            </span>
+                            Traitement automatisé des fichiers pour garantir la qualité et la conformité des données.
+                        </li>
+                        <li>
+                            <b>Création de dashboards dynamiques :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                Set dashboard = smartsheet.Sheets.Add("<Nom du dashboard>", Nothing, Nothing, Nothing)<br>
+                                dashboard.AddWidget "Chart", "Doughnut", dataRange, options
+                            </span>
+                            Visualisation interactive des données de maintenance par équipe et par période.
+                        </li>
+                        <li>
+                            <b>Automatisation des rapports :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                Set rapport = ThisWorkbook.Worksheets.Add("Rapport_" & Format(Date, "yyyymmdd"))<br>
+                                rapport.Range("A1").Value = "Rapport de maintenance du " & Format(Date, "dd/mm/yyyy")
+                            </span>
+                            Génération automatique de rapports de maintenance, avec envoi par email aux parties prenantes.
+                        </li>
+                    </ul>
+                    <p class="text-gray-700">
+                        <b>Impact :</b>  
+                        Solution déployée sur SmartSheet, utilisée par les équipes de maintenance pour le suivi et la gestion des interventions.  
+                        <br>
+                        <b>Compétences prouvées :</b>  
+                        - <b>C4</b> : Gestion avancée des données, intégration et automatisation des flux de données.<br>
+                        - <b>C5</b> : Conduite de projet agile, documentation et formation des utilisateurs.<br>
+                        - <b>C6</b> : Collaboration en équipe, gestion des versions, intégration continue.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="competences" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 section-fade">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Mes Compétences</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-6">Les technologies et compétences que j'ai acquises tout au long de mon parcours académique et professionnel.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Compétences techniques -->
+                <div class="section-fade">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center text-primary">
+                        <i class="ri-code-s-slash-line ri-lg mr-2"></i>Compétences Techniques
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="mb-4">
+                            <h4 class="text-xl font-semibold mb-3 text-gray-700">Langages de Programmation</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">VBA</span>
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">HTML/CSS</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-xl font-semibold mb-3 text-gray-700">Outils et Technologies</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">Excel</span>
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">Power BI</span>
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">SmartSheet</span>
+                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences transversales -->
+                <div class="section-fade">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center text-primary">
+                        <i class="ri-group-line ri-lg mr-2"></i>Compétences Transversales
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-line text-primary mr-3"></i>
+                            <p>Gestion de projets : planification, suivi, et déploiement de solutions.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-line text-primary mr-3"></i>
+                            <p>Analyse de données et automatisation des processus métiers.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-line text-primary mr-3"></i>
+                            <p>Support technique et collaboration en équipe.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 section-fade">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Me Contacter</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Vous avez un projet ou une opportunité à me proposer ?
+                    N'hésitez pas à me contacter !</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-gray-50 rounded-lg shadow-lg p-8 section-fade">
+                <form id="contact-form" class="space-y-6" action="" method="POST">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Nom</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-colors"
+                                placeholder="Votre nom" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-colors"
+                                placeholder="Votre email" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-gray-700 mb-2">Sujet</label>
+                        <input type="text" id="subject" name="subject"
+                            class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-colors"
+                            placeholder="Sujet de votre message" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-colors"
+                            placeholder="Votre message" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit"
+                            class="w-full bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors shadow-md whitespace-nowrap">Envoyer
+                            le message</button>
+                    </div>
+                </form>
+                <div id="form-success" class="hidden mt-6 p-4 bg-green-100 text-green-800 rounded">
+                    Votre message a été envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+                </div>
+                <div id="form-error" class="hidden mt-6 p-4 bg-red-100 text-red-800 rounded">
+                    Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer plus tard.
+                </div>
+            </div>
+            <div class="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 section-fade">
+                <a href="mailto:khaoulani.hamza@gmail.com"
+                    class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                    <div class="w-10 h-10 flex items-center justify-center mr-3 bg-gray-100 rounded-full">
+                        <i class="ri-mail-line ri-lg"></i>
+                    </div>
+                    <span>khaoulani.hamza@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/hamza-khaoulani/" target="_blank"
+                    class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                    <div class="w-10 h-10 flex items-center justify-center mr-3 bg-gray-100 rounded-full">
+                        <i class="ri-linkedin-line ri-lg"></i>
+                    </div>
+                    <span>linkedin.com/in/hamza-khaoulani/</span>
+                </a>
+                <a href="https://github.com/rogmaaan" target="_blank"
+                    class="flex items-center text-gray-700 hover:text-primary transition-colors" data-readdy="true">
+                    <div class="w-10 h-10 flex items-center justify-center mr-3 bg-gray-100 rounded-full">
+                        <i class="ri-github-line ri-lg"></i>
+                    </div>
+                    <span>https://github.com/rogmaaan</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>© Hamza Khaoulani – Portfolio – 2025</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="https://www.linkedin.com/in/hamza-khaoulani/" target="_blank"
+                        class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                        <i class="ri-linkedin-line ri-lg"></i>
+                    </a>
+                    <a href="https://github.com/khaoulani" target="_blank"
+                        class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+                        data-readdy="true">
+                        <i class="ri-github-line ri-lg"></i>
+                    </a>
+                    <a href="mailto:hamza.khaoulani@gmail.com"
+                        class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                        <i class="ri-mail-line ri-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modals pour les projets -->
+    <div id="project-modal-1" class="modal fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black bg-opacity-50" id="modal-overlay-1"></div>
+        <div class="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <button
+                class="close-modal absolute top-4 right-4 w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors z-10"
+                data-modal="1">
+                <i class="ri-close-line ri-2x"></i>
+            </button>
+            <div class="p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-4">Scope de maintenance (GE Power Conversion)</h3>
+                <div class="mb-8">
+                    <img src="Image/scope-maintenance.jpg"
+                        alt="Scope de maintenance" class="w-full h-auto rounded-lg">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-flag-line"></i>
+                            </div>
+                            Objectif
+                        </h4>
+                        <p class="text-gray-700">
+                            Automatiser la génération, la gestion et l’export du scope de maintenance pour chaque navire, en intégrant la sélection dynamique des équipements, la gestion multilingue, la consolidation des pièces/outils et l’export sécurisé.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-tools-line"></i>
+                            </div>
+                            Technologies
+                        </h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• VBA (Excel avancé)</li>
+                            <li>• UserForms & Contrôles dynamiques</li>
+                            <li>• Manipulation fichiers & dossiers réseau</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-award-line"></i>
+                            </div>
+                            Compétences mobilisées
+                        </h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li><b>C4 : Gérer des données de l'information</b></li>
+                            <li>• Capturer, stocker et organiser des données complexes (extraction, structuration, export)</li>
+                            <li>• Préparer et extraire des données pour l’exploitation (UserForm, ListBox, ComboBox, parsing fichiers)</li>
+                            <li>• Automatiser l’exploitation et la restitution (export, génération de feuilles dynamiques)</li>
+                            <li class="mt-2"><b>C5 : Conduire un projet</b></li>
+                            <li>• Analyse des besoins, intégration dans le SI, adaptation continue</li>
+                            <li>• Mesure d’impact (gain de temps, fiabilité, sécurité des données)</li>
+                            <li class="mt-2"><b>C6 : Collaborer au sein d'une équipe informatique</b></li>
+                            <li>• Travail en équipe, partage de veille, support utilisateurs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h4 class="font-bold text-lg mb-4">Description détaillée & extraits de code</h4>
+                    <ul class="text-gray-700 space-y-2 mb-4 list-disc pl-5">
+                        <li>
+                            <b>Recherche et gestion intelligente des fichiers :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                ' Vérifie si un fichier existe déjà pour le navire sélectionné<br>
+                                If fso.FolderExists(dossier) Then ... If (InStr(1, fichier.Name, clientName, vbTextCompare) > 0) ...
+                            </span>
+                            Permet d’éviter les doublons et de garantir la traçabilité des interventions.
+                        </li>
+                        <li>
+                            <b>Sélection dynamique des équipements et génération des tâches :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                For rowIndex = 0 To ListBoxResume.ListCount - 1<br>
+                                equipmentType = ExtractEquipmentType(ListBoxResume.List(rowIndex))<br>
+                                ...<br>
+                                taskList = GetTasksForEquipmentType(wsData, equipmentType, selectedYear)
+                            </span>
+                            L’utilisateur choisit les équipements et années, l’outil génère automatiquement les feuilles et tâches associées.
+                        </li>
+                        <li>
+                            <b>Gestion multilingue et consolidation des pièces/outils :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                .Cells(3, 2).Value = "Step 1: Choose Language Display"<br>
+                                ...<br>
+                                .Object.Caption = "Generate Parts and Tools"
+                            </span>
+                            Les feuilles Parts et Tools sont générées et consolidées automatiquement selon la sélection.
+                        </li>
+                        <li>
+                            <b>Export sécurisé et automatisé :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                fileName = "Scope " & coqueNumber & " " & clientName & ...<br>
+                                wbNew.SaveAs fileName:=savePath
+                            </span>
+                            Export du scope dans un nouveau classeur, sans lignes masquées, avec nommage automatique.
+                        </li>
+                    </ul>
+                    <p class="text-gray-700">
+                        <b>Impact :</b>  
+                        Outil déployé sur le réseau GE, utilisé par l’équipe technique et les chefs de projet.  
+                        <br>
+                        <b>Compétences prouvées :</b>  
+                        - <b>C4</b> : Gestion, structuration, extraction et restitution de données complexes (plusieurs feuilles, formats, langues, catalogues).<br>
+                        - <b>C5</b> : Conduite de projet de bout en bout, adaptation continue, documentation et support.<br>
+                        - <b>C6</b> : Travail en équipe, support utilisateurs, partage de bonnes pratiques et veille sur l’automatisation Excel/VBA.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="project-modal-2" class="modal fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black bg-opacity-50" id="modal-overlay-2"></div>
+        <div class="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <button
+                class="close-modal absolute top-4 right-4 w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors z-10"
+                data-modal="2">
+                <i class="ri-close-line ri-2x"></i>
+            </button>
+            <div class="p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-4">SmartSheet – Drydock Overview</h3>
+                <div class="mb-8">
+                    <img src="Image/smartsheet_dashboard.png"
+                        alt="SmartSheet Drydock Overview" class="w-full h-auto rounded-lg">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-flag-line"></i>
+                            </div>
+                            Objectif
+                        </h4>
+                        <p class="text-gray-700">
+                            Centraliser et automatiser la gestion des données de maintenance navale via SmartSheet, en intégrant l’extraction de Service Max, l’archivage, le nettoyage et la génération automatique de données.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-tools-line"></i>
+                            </div>
+                            Technologies
+                        </h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• SmartSheet</li>
+                            <li>• Automatisation</li>
+                            <li>• Python</li>
+                            <li>• Data Shuttle</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 flex items-center">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+                                <i class="ri-award-line"></i>
+                            </div>
+                            Compétences mobilisées
+                        </h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li><b>C4 : Gérer des données de l'information</b></li>
+                            <li>• Extraction, transformation et chargement de données (ETL)</li>
+                            <li>• Automatisation des flux de données entre applications</li>
+                            <li>• Création de rapports et dashboards dynamiques</li>
+                            <li class="mt-2"><b>C5 : Conduire un projet</b></li>
+                            <li>• Analyse des besoins, conception et déploiement de solutions</li>
+                            <li>• Documentation technique et formation des utilisateurs</li>
+                            <li class="mt-2"><b>C6 : Collaborer au sein d'une équipe informatique</b></li>
+                            <li>• Travail en équipe agile, gestion des versions, intégration continue</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h4 class="font-bold text-lg mb-4">Description détaillée & extraits de code</h4>
+                    <ul class="text-gray-700 space-y-2 mb-4 list-disc pl-5">
+                        <li>
+                            <b>Extraction et intégration des données Service Max :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                ' Connexion à l'API Service Max et extraction des données<br>
+                                Set http = CreateObject("MSXML2.ServerXMLHTTP.6.0")<br>
+                                http.Open "GET", url, False, username, password
+                            </span>
+                            Récupération automatisée des données de maintenance depuis Service Max.
+                        </li>
+                        <li>
+                            <b>Automatisation du nettoyage et de l'archivage :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                For Each fichier In dossier.Files<br>
+                                If fichier.Name Like "*.csv" Then<br>
+                                ' Traitement des fichiers CSV (nettoyage, transformation)<br>
+                                Next fichier
+                            </span>
+                            Traitement automatisé des fichiers pour garantir la qualité et la conformité des données.
+                        </li>
+                        <li>
+                            <b>Création de dashboards dynamiques :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                Set dashboard = smartsheet.Sheets.Add("<Nom du dashboard>", Nothing, Nothing, Nothing)<br>
+                                dashboard.AddWidget "Chart", "Doughnut", dataRange, options
+                            </span>
+                            Visualisation interactive des données de maintenance par équipe et par période.
+                        </li>
+                        <li>
+                            <b>Automatisation des rapports :</b>  
+                            <span class="block text-xs bg-gray-100 rounded p-2 my-2 font-mono">
+                                Set rapport = ThisWorkbook.Worksheets.Add("Rapport_" & Format(Date, "yyyymmdd"))<br>
+                                rapport.Range("A1").Value = "Rapport de maintenance du " & Format(Date, "dd/mm/yyyy")
+                            </span>
+                            Génération automatique de rapports de maintenance, avec envoi par email aux parties prenantes.
+                        </li>
+                    </ul>
+                    <p class="text-gray-700">
+                        <b>Impact :</b>  
+                        Solution déployée sur SmartSheet, utilisée par les équipes de maintenance pour le suivi et la gestion des interventions.  
+                        <br>
+                        <b>Compétences prouvées :</b>  
+                        - <b>C4</b> : Gestion avancée des données, intégration et automatisation des flux de données.<br>
+                        - <b>C5</b> : Conduite de projet agile, documentation et formation des utilisateurs.<br>
+                        - <b>C6</b> : Collaboration en équipe, gestion des versions, intégration continue.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="assets/js/themeToggle.js"></script>
+    <script src="assets/js/mobileMenu.js"></script>
+    <script src="assets/js/animationScroll.js"></script>
+    <script src="assets/js/projectModals.js"></script>
+    <script src="assets/js/imageModal.js"></script>
+    <script src="assets/js/contactForm.js"></script>
+    <script src="assets/js/typingAnimation.js"></script> <!-- Added new script for typing animation -->
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scope de maintenance - Détails du Projet | Portfolio de KHAOULANI Hamza</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#27DEBF',secondary:'#2563eb'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Place ce style dans le <head> pour que le zoom fonctionne sur toutes les images de la page -->
+    <style>
+        .zoom-on-hover {
+            transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+            cursor: pointer;
+        }
+        .zoom-on-hover:hover {
+            transform: scale(1.15);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-['Pacifico'] text-primary">KHAOULANI Hamza</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">Accueil</a>
+                <a href="index.html#competences" class="text-gray-600 hover:text-primary transition-colors">Compétences</a>
+                <a href="index.html#projets" class="text-gray-600 hover:text-primary transition-colors font-medium">Projets</a>
+                <a href="index.html#contact" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
+            </div>
+            <button id="mobileMenuButton" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-500">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-600 hover:text-primary transition-colors py-2">Accueil</a>
+                <a href="index.html#competences" class="text-gray-600 hover:text-primary transition-colors py-2">Compétences</a>
+                <a href="index.html#projets" class="text-gray-600 hover:text-primary transition-colors py-2 font-medium">Projets</a>
+                <a href="index.html#contact" class="text-gray-600 hover:text-primary transition-colors py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Retour à la liste des projets -->
+    <div class="container mx-auto px-4 py-6">
+        <a href="index.html#projets" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
+            <i class="ri-arrow-left-line ri-lg mr-2"></i>
+            <span>Retour aux projets</span>
+        </a>
+    </div>
+
+    <!-- En-tête du projet -->
+    <header class="container mx-auto px-4 py-6">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Scope de maintenance (GE Power Conversion)</h1>
+        <div class="flex flex-wrap gap-3 mb-6">
+            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">VBA</span>
+            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Excel</span>
+            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Automatisation</span>
+        </div>
+    </header>
+
+    <!-- Image principale du projet -->
+    <section class="container mx-auto px-4 mb-12">
+        <figure class="rounded-lg overflow-hidden shadow-lg">
+            <img src="Image/excell.png" alt="Scope de maintenance"
+                 class="object-cover w-full h-80" />
+            <figcaption class="text-center text-gray-600 mt-2">
+                Outil Excel/VBA pour la gestion automatisée du scope de maintenance des navires
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- Informations du projet -->
+    <section class="container mx-auto px-4 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Colonne principale -->
+            <div class="md:col-span-2 flex flex-col gap-10">
+
+                <!-- 1. Accueil & Lancement -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                        1. Accueil & Lancement
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-semibold ml-4">C4</span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-semibold ml-2">C5</span>
+                    </h2>
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex-1 group mb-8">
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+                            <div class="overflow-hidden rounded-lg shadow-md" style="min-width:350px;max-width:700px;">
+                                <img src="Image/capture_premiere_page.jpg" alt="Première page Scope"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Fonctionnalités :</b> Lancement du Scope, accès rapide aux principales actions.<br>
+                                <ul class="list-disc pl-5 mt-2 text-sm text-gray-700">
+                                    <li>Bouton <b>Scope de maintenance</b> pour démarrer le process</li>
+                                    <li>Bouton <b>Refresh Data</b> pour actualiser les données</li>
+                                    <li>Bouton <b>Delete All Sheet</b> pour nettoyer le classeur</li>
+                                </ul>
+                                <div class="mt-3 text-xs bg-blue-50 border-l-4 border-blue-400 p-3 rounded">
+                                    <b>Détail technique :</b><br>
+                                    Chaque bouton lance une macro dédiée. Exemple pour le nettoyage :
+                                    <span class="font-mono block mt-2">
+                                        Sub DeleteAllSheetsExceptInitial()<br>
+                                        &nbsp;&nbsp;For Each ws In ThisWorkbook.Worksheets<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;If ws.Name &lt;&gt; "DATA" And ... Then ws.Delete<br>
+                                        &nbsp;&nbsp;Next ws<br>
+                                        End Sub
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex-1 group">
+                        <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+                            <div class="overflow-hidden rounded-lg shadow-md" style="min-width:350px;max-width:700px;">
+                                <img src="Image/captureS_lancement_iterface.jpg" alt="Lancement interface"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Fonctionnalités :</b> Interface UserForm ergonomique, navigation MultiPage.<br>
+                                <ul class="list-disc pl-5 mt-2 text-sm text-gray-700">
+                                    <li>Navigation entre les étapes via boutons Suivant/Précédent</li>
+                                    <li>Affichage dynamique des choix utilisateur</li>
+                                </ul>
+                                <div class="mt-3 text-xs bg-blue-50 border-l-4 border-blue-400 p-3 rounded">
+                                    <b>Détail technique :</b><br>
+                                    Utilisation de MultiPage et gestion des événements pour guider l'utilisateur.
+                                    <span class="font-mono block mt-2">
+                                        Private Sub NextButton_Click()<br>
+                                        &nbsp;&nbsp;MultiPage1.Value = MultiPage1.Value + 1<br>
+                                        End Sub
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Sécurité & Préparation des données -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary mb-6 mt-10 flex items-center">
+                        2. Sécurité & Préparation des données
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-semibold ml-4">C4</span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-semibold ml-2">C5</span>
+                    </h2>
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex-1 group mb-8">
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+                            <div class="overflow-hidden rounded-lg shadow-md" style="min-width:350px;max-width:700px;">
+                                <img src="Image/CapturesSifexist.jpg" alt="Vérification existence fichier"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Fonctionnalités :</b> Recherche automatique d’un fichier existant selon les critères.<br>
+                                <ul class="list-disc pl-5 mt-2 text-sm text-gray-700">
+                                    <li>Vérification sur le réseau pour éviter les doublons</li>
+                                    <li>Recherche par client, navire, numéro de coque</li>
+                                </ul>
+                                <div class="mt-3 text-xs bg-blue-50 border-l-4 border-blue-400 p-3 rounded">
+                                    <b>Détail technique :</b><br>
+                                    Utilisation de FileSystemObject pour parcourir les dossiers et comparer les noms de fichiers.
+                                    <span class="font-mono block mt-2">
+                                        Set fso = CreateObject("Scripting.FileSystemObject")<br>
+                                        For Each sousDossier In fso.GetFolder(dossier).SubFolders<br>
+                                        &nbsp;&nbsp;For Each fichier In sousDossier.Files<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;If InStr(1, fichier.Name, boatName, vbTextCompare) &gt; 0 Then ...<br>
+                                        &nbsp;&nbsp;Next fichier<br>
+                                        Next sousDossier
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex-1 group">
+                        <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+                            <div class="overflow-hidden rounded-lg shadow-md" style="min-width:350px;max-width:700px;">
+                                <img src="Image/CaptureS_selection des equipement.jpg" alt="Sélection équipements"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Fonctionnalités :</b> Sélection des équipements via onglets, ajout dynamique à la ListBox.<br>
+                                <ul class="list-disc pl-5 mt-2 text-sm text-gray-700">
+                                    <li>Visualisation en temps réel de la sélection</li>
+                                    <li>Ajout/suppression dynamique</li>
+                                </ul>
+                                <div class="mt-3 text-xs bg-blue-50 border-l-4 border-blue-400 p-3 rounded">
+                                    <b>Détail technique :</b><br>
+                                    La ListBox est alimentée à chaque changement de sélection.
+                                    <span class="font-mono block mt-2">
+                                        For rowIndex = 0 To ListBoxResume.ListCount - 1<br>
+                                        &nbsp;&nbsp;equipmentType = ExtractEquipmentType(ListBoxResume.List(rowIndex))<br>
+                                        Next rowIndex
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Génération & Gestion des feuilles -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary mb-6 mt-10 flex items-center">
+                        3. Génération & Gestion des feuilles
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-semibold ml-4">C4</span>
+                    </h2>
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex-1 group mb-8">
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+                            <div class="overflow-hidden rounded-lg shadow-md" style="min-width:350px;max-width:700px;">
+                                <img src="Image/CapturesS_equipement_generee.jpg" alt="Feuilles équipements générées"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Fonctionnalités :</b> Génération automatique d’une feuille par équipement.<br>
+                                <ul class="list-disc pl-5 mt-2 text-sm text-gray-700">
+                                    <li>Structuration des tâches, outils, pièces, instructions</li>
+                                    <li>Formatage dynamique et extraction DATA</li>
+                                </ul>
+                                <div class="mt-3 text-xs bg-blue-50 border-l-4 border-blue-400 p-3 rounded">
+                                    <b>Détail technique :</b><br>
+                                    Création de feuilles et remplissage dynamique depuis la base DATA.
+                                    <span class="font-mono block mt-2">
+                                        For Each equipmentType In selectedEquipments<br>
+                                        &nbsp;&nbsp;Set ws = EnsureWorksheetExists(wb, equipmentType)<br>
+                                        &nbsp;&nbsp;ws.Cells(1, 1).Value = "Task ID"<br>
+                                        &nbsp;&nbsp;' Remplissage dynamique des tâches<br>
+                                        Next equipmentType
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex-1 group">
+                        <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+                            <div class="overflow-hidden rounded-lg shadow-md" style="min-width:350px;max-width:700px;">
+                                <img src="Image/CapturesS_management.jpg" alt="Gestion avancée"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Fonctionnalités :</b> Feuille Management : choix langue, update, export, parts/tools.<br>
+                                <ul class="list-disc pl-5 mt-2 text-sm text-gray-700">
+                                    <li>Boutons pour chaque action clé</li>
+                                    <li>Centralisation de la gestion du scope</li>
+                                </ul>
+                                <div class="mt-3 text-xs bg-blue-50 border-l-4 border-blue-400 p-3 rounded">
+                                    <b>Détail technique :</b><br>
+                                    Génération dynamique des boutons et automatisation des actions de gestion.
+                                    <span class="font-mono block mt-2">
+                                        .Cells(3, 2).Value = "Step 1: Choose Language Display"<br>
+                                        .Object.Caption = "Generate Parts and Tools"
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. Multilingue & Consolidation -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary mb-6 mt-10 flex items-center">
+                        4. Multilingue & Consolidation
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-semibold ml-4">C6</span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-semibold ml-2">C4</span>
+                    </h2>
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex-1 group mb-8">
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+                            <div class="overflow-hidden rounded-lg shadow-md" style="min-width:350px;max-width:700px;">
+                                <img src="Image/CaptureS_chose_language.jpg" alt="Choix langue"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Fonctionnalités :</b> Sélection de la langue d’affichage (FR/EN).<br>
+                                <ul class="list-disc pl-5 mt-2 text-sm text-gray-700">
+                                    <li>Affichage dynamique des colonnes selon la langue</li>
+                                </ul>
+                                <div class="mt-3 text-xs bg-blue-50 border-l-4 border-blue-400 p-3 rounded">
+                                    <b>Détail technique :</b><br>
+                                    Masquage/affichage des colonnes selon le choix utilisateur.
+                                    <span class="font-mono block mt-2">
+                                        If choice = vbYes Then<br>
+                                        &nbsp;&nbsp;ws.Columns("D").EntireColumn.Hidden = False ' Show EN<br>
+                                        &nbsp;&nbsp;ws.Columns("E").EntireColumn.Hidden = True  ' Hide FR<br>
+                                        ElseIf choice = vbNo Then<br>
+                                        &nbsp;&nbsp;ws.Columns("D").EntireColumn.Hidden = True  ' Hide EN<br>
+                                        &nbsp;&nbsp;ws.Columns("E").EntireColumn.Hidden = False ' Show FR<br>
+                                        End If
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex-1 group">
+                        <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+                            <div class="overflow-hidden rounded-lg shadow-md" style="min-width:350px;max-width:700px;">
+                                <img src="Image/CaptureSPartsandtools.png" alt="Parts and Tools"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Fonctionnalités :</b> Consolidation automatique des pièces et outils nécessaires.<br>
+                                <ul class="list-disc pl-5 mt-2 text-sm text-gray-700">
+                                    <li>Génération d'une feuille synthèse Parts & Tools</li>
+                                </ul>
+                                <div class="mt-3 text-xs bg-blue-50 border-l-4 border-blue-400 p-3 rounded">
+                                    <b>Détail technique :</b><br>
+                                    Appel d'une fonction pour générer la feuille synthèse.
+                                    <span class="font-mono block mt-2">
+                                        Call GeneratePartsAndTools(selectedEquipments, selectedLanguage)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Synchronisation, Actualisation & Export -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary mb-6 mt-10 flex items-center">
+                        5. Synchronisation, Actualisation & Export
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-semibold ml-4">C4</span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-semibold ml-2">C5</span>
+                    </h2>
+                    <div class="bg-white rounded-lg shadow-sm p-6 flex-1 group mb-8">
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+                            <div class="relative rounded-lg shadow-md" style="min-width:350px;max-width:700px; overflow:visible;">
+                                <img src="Image/CapturesSupdateshedule.png" alt="Update Schedule"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Fonctionnalités :</b> Synchronisation et actualisation des données du scope.<br>
+                                <ul class="list-disc pl-5 mt-2 text-sm text-gray-700">
+                                    <li>Mise à jour automatique de la feuille <b>Schedule</b> à partir d’un fichier externe</li>
+                                    <li>Actualisation des feuilles <b>DATA</b> et <b>Catalog Option</b> via Power Query</li>
+                                    <li>Export intelligent des feuilles équipements dans un nouveau classeur</li>
+                                </ul>
+                                <div class="mt-3 text-xs bg-blue-50 border-l-4 border-blue-400 p-3 rounded">
+                                    <b>Détail technique :</b><br>
+                                    <u>1. Mise à jour du planning (Schedule) :</u>
+                                    <span class="font-mono block mt-2">
+                                        Sub ActualiserDepuisClasseurExterne()<br>
+                                        &nbsp;&nbsp;Set feuilleDestination = ThisWorkbook.Sheets("Schedule")<br>
+                                        &nbsp;&nbsp;Set classeurSource = Workbooks.Open(cheminClasseur, ReadOnly:=True)<br>
+                                        &nbsp;&nbsp;Set feuilleSource = classeurSource.Sheets("Schedule")<br>
+                                        &nbsp;&nbsp;feuilleDestination.Cells.Clear<br>
+                                        &nbsp;&nbsp;feuilleSource.UsedRange.Copy Destination:=feuilleDestination.Range("A1")<br>
+                                        &nbsp;&nbsp;classeurSource.Close SaveChanges:=False<br>
+                                        End Sub
+                                    </span>
+                                    <span class="text-xs text-gray-700 block mt-1">
+                                        Cette macro permet de synchroniser le planning du projet avec la dernière version disponible, en toute sécurité.
+                                    </span>
+                                    <u class="block mt-3">2. Actualisation des données via Power Query :</u>
+                                    <span class="font-mono block mt-2">
+                                        Sub RefreshAllData()<br>
+                                        &nbsp;&nbsp;ThisWorkbook.RefreshAll<br>
+                                        End Sub
+                                    </span>
+                                    <span class="text-xs text-gray-700 block mt-1">
+                                        Cette macro déclenche l’actualisation de toutes les requêtes Power Query du classeur, rechargeant automatiquement les données externes dans les feuilles <b>DATA</b> et <b>Catalog Option</b>.
+                                    </span>
+                                    <u class="block mt-3">3. Export des feuilles équipements :</u>
+                                    <span class="font-mono block mt-2">
+                                        For Each ws In wbSource.Sheets<br>
+                                        &nbsp;&nbsp;If Trim(UCase(ws.Name)) &lt;&gt; "DATA" And ... Then<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;ws.Copy After:=wbNew.Sheets(wbNew.Sheets.Count)<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;' Suppression des colonnes/lignes masquées<br>
+                                        &nbsp;&nbsp;End If<br>
+                                        Next ws<br>
+                                        wbNew.SaveAs fileName:=savePath
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Illustrations Power Query et connexions -->
+                        <div class="flex flex-col md:flex-row gap-6 items-center mt-6">
+                            <div class="relative rounded-lg shadow-md" style="min-width:350px;max-width:700px; overflow:visible;">
+                                <img src="Image/CapturesPowerQuery.png" alt="Actualisation Power Query"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Actualisation des données via Power Query :</b><br>
+                                <span class="text-sm text-gray-700">
+                                    Cette capture montre l’interface d’actualisation des requêtes Power Query dans Excel. Lorsqu’on clique sur le bouton <b>Refresh Data</b>, toutes les requêtes connectées (DATA, Catalog Option, etc.) sont rafraîchies automatiquement.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-6 items-center mt-6">
+                            <div class="relative rounded-lg shadow-md" style="min-width:350px;max-width:700px; overflow:visible;">
+                                <img src="Image/Requettedeconnexion.png" alt="Connexion des requêtes"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Connexion des requêtes Power Query :</b><br>
+                                <span class="text-sm text-gray-700">
+                                    Cette capture présente la liste des requêtes connectées dans le classeur Excel. On visualise ici toutes les sources de données qui alimentent automatiquement les feuilles <b>DATA</b> et <b>Catalog Option</b> lors de l’actualisation.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-6 items-center mt-6">
+                            <div class="relative rounded-lg shadow-md" style="min-width:350px;max-width:700px; overflow:visible;">
+                                <img src="Image/CapturesExportSheet.png" alt="Export feuilles équipements"
+                                     class="object-contain w-full max-h-80 zoom-on-hover" />
+                            </div>
+                            <div>
+                                <b>Export des feuilles équipements :</b><br>
+                                <span class="text-sm text-gray-700">
+                                    Export intelligent de toutes les feuilles équipements (hors DATA, Scope, etc.) dans un nouveau classeur, avec nommage automatique et suppression des lignes/colonnes masquées.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Colonne de droite : compétences et technique -->
+            <aside class="space-y-8">
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Informations Techniques</h2>
+                    <ul class="list-disc pl-5 text-gray-700 mb-6">
+                        <li><i class="ri-file-excel-2-line text-green-600 mr-2"></i> VBA avancé (UserForms, ListBox, ComboBox, gestion fichiers réseau, export Excel)</li>
+                        <li><i class="ri-tools-line text-yellow-600 mr-2"></i> Automatisation de la génération de feuilles Excel et structuration dynamique</li>
+                        <li><i class="ri-lock-line text-blue-600 mr-2"></i> Export sécurisé et automatisé sur le réseau GE</li>
+                        <li><i class="ri-translate-2 text-purple-600 mr-2"></i> Gestion multilingue (FR/EN)</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Signification des compétences</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-semibold mr-3">C4</span>
+                            <span class="text-gray-700 text-sm">Gérer des données de l'information (structuration, extraction, automatisation, fiabilité des données)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-semibold mr-3">C5</span>
+                            <span class="text-gray-700 text-sm">Conduire un projet (analyse des besoins, documentation, déploiement, sécurité, impact métier)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-semibold mr-3">C6</span>
+                            <span class="text-gray-700 text-sm">Collaborer au sein d'une équipe informatique (UX, support, formation, bonnes pratiques)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Contact & Documentation</h2>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="mailto:hamza.khaoulani@etu.univ-lemans.fr" class="flex items-center text-black hover:text-primary/80 transition-colors">
+                                <div class="w-8 h-8 flex items-center justify-center text-pink-600 mr-3">
+                                    <i class="ri-mail-line ri-lg"></i>
+                                </div>
+                                <span>Contactez-moi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="flex items-center text-black hover:text-primary/80 transition-colors">
+                                <div class="w-8 h-8 flex items-center justify-center text-indigo-600 mr-3">
+                                    <i class="ri-file-pdf-line ri-lg"></i>
+                                </div>
+                                <span>Documentation technique</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-2xl font-['Pacifico'] text-white">Hamza</a>
+                    <p class="mt-2 text-gray-400">Développeur Automatisation & Data</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <div class="w-10 h-10 flex items-center justify-center">
+                            <i class="ri-github-fill ri-lg"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <div class="w-10 h-10 flex items-center justify-center">
+                            <i class="ri-linkedin-box-fill ri-lg"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <div class="w-10 h-10 flex items-center justify-center">
+                            <i class="ri-mail-fill ri-lg"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 KHAOULANI Hamza. Tous droits réservés.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors mr-6">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/mobileMenu.js"></script>
+</body>
+</html>
